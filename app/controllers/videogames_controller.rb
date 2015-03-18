@@ -40,7 +40,7 @@ class VideogamesController < ApplicationController
       @message = "Your new videogame was successfully added:"
       @new_game = a
     else
-      @message = existing_game.errors.to_a
+      @message = a.errors.to_a
     end
   end
   
