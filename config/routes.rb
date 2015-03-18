@@ -1,4 +1,22 @@
 RailsFailz::Application.routes.draw do
+  get "videogames/home" => 'videogames#home'
+  
+  get "videogames/view_all" => 'videogames#view_all'
+  
+  get "videogames/delete" => 'videogames#delete'
+  
+  post "videogames/delete" => 'videogames#delete_success'
+  
+  get "videogames/create" => 'videogames#create'
+  
+  post "videogames/create" => 'videogames#create_success'
+  
+  get "videogames/update" => 'videogames#update'
+  
+  post "videogames/update" => 'videogames#update_success'
+  
+
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

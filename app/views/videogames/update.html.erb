@@ -1,0 +1,34 @@
+<h1>Find the videogame you want to update:</h1>
+<form action="<%= "#{@path}" %>">
+  <select name="id">
+    <p><% @videogames.each do |object| %>
+      <option value="<%= object.id %>"><%= object.title %></option>
+      <% end %></p>
+  </select>
+  <br><br>
+  <input type="submit" class="navbutton" value="SUBMIT">
+  <br><br>
+</form> 
+
+<br>
+
+
+<% if @update_partial %> 
+ <hr width="600px" align="left"></hr>
+
+ <h1>Make changes to the videogame entry:</h1>
+
+ <form action="/videogames/update" method="post">
+   <strong>Title:</strong><br><br>
+     <input type="text" name="title" required value="<%= @game.title %>"></input><br><br>
+   <strong>Genre:<br><br></strong>
+     <input type="text" name="genre" required value="<%= @game.genre %>"></input><br><br>
+   <strong>Rating:</strong><br>
+     <input type="text" name="rating" required value="<%= @game.rating %>"></input><br><br>
+
+   <input type="hidden" name="id" value="<%= @game.id.to_s %>">
+   <input type="submit" class="navbutton" value="SUBMIT">
+   <br><br>
+   </form>
+<% end %>
+

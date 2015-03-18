@@ -1,0 +1,10 @@
+<h1><%= @message %></h1>
+<% if @deleted_game %>
+<ul>
+  <li><strong>Title:</strong> <%= @deleted_game.title %></li><br>
+  <li><strong>Genre:</strong> <%= @deleted_game.genre %></li><br>
+  <li><strong>Rating:</strong> <%= @deleted_game.rating %></li>
+</ul>
+<% end %>
+
+<p><em><a href="/videogames/home">Back home</a></em></p>

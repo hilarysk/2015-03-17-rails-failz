@@ -1,0 +1,12 @@
+<h1>All videogames:</h1>
+<ul>
+  <% @videogames.each do |object| %>
+    <br>
+    <li>
+      <strong><%= object.title %></strong><br>
+      Genre: <%= object.genre %><br>
+      Rating: <%= object.rating %>
+    </li>
+  <% end %>
+</ul>
+<p><em><a href="/videogames/home">Back home</a></em></p>

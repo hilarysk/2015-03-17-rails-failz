@@ -1,0 +1,13 @@
+<h1>Find the videogame you want to delete:</h1>
+<form action="/videogames/delete" method="post">
+  <select name="id">
+    <p><% @videogames.each do |object| %>
+      <option value="<%= object.id %>"><%= object.title %></option>
+      <% end %></p>
+  </select>
+  <br><br>
+  <input type="submit" class="navbutton" value="SUBMIT">
+  <br><br>
+</form> 
+
+<br>

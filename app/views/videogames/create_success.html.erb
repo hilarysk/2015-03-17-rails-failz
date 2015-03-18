@@ -1,0 +1,10 @@
+<h1><%= @message %></h1>
+<% if @new_game %>
+<ul>
+  <li><strong>Title:</strong> <%= @new_game.title %></li><br>
+  <li><strong>Genre:</strong> <%= @new_game.genre %></li><br>
+  <li><strong>Rating:</strong> <%= @new_game.rating %></li>
+</ul>
+<% end %>
+
+<p><em><a href="/videogames/home">Back home</a></em></p>
